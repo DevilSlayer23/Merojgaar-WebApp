@@ -1,16 +1,18 @@
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+
 from django import forms
+from .models import Company, Job
 
-class CompanyForm(UserCreationForm):
+
+
+class CompanyForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ('username' ,  'password' , 'password2')
+        model = Company
+        fields = '__all__'
 
-    def save(self , commit=True):
-        company = super(CompanyForm , self).save(commit=False)
-        if commit:
-            company.save()
-        return company
+class JobForm(forms.ModelForm):
+    class Meta:
+        model = Job
+        fields = '__all__'
+
 
   

@@ -1,16 +1,13 @@
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm 
 from django import forms
+from .models import  Candidate , CandidateSkill
 
-class UserForm(UserCreationForm):
+class CandidateForm(forms.ModelForm):
     class Meta:
-        model = User
-        fields = ('username' ,  'password' , 'password2')
+        model = Candidate
+        fields = '__all__'
 
-    def save(self , commit=True):
-        user = super(UserForm , self).save(commit=False)
+class CandidateSkillForm(forms.ModelForm):
+    class Meta:
+        model = CandidateSkill
+        fields = '__all__'
 
-        if commit:
-            user.save()
-            
-        return user

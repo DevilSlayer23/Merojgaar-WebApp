@@ -1,5 +1,5 @@
 {% load static %}
-{% include 'main/header.html' %}
+{% include 'company/header.html' %}
 
 
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -52,38 +52,6 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <h3><i></i><button style="width: 50%; margin: auto;" type="button"
-    class="btn btn-primary btn-lg justify-content-center d-flex mt-5">Browse recent jobs</button></i></h3>
-  <div class="jobs mt-5 mb-3">
-    <div class="row">
-        {% for job in jobs %}
-          <div class="col-md-4">
-            <div class="card p-3 mb-2">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="ms-2 c-details card-title">
-                          
-                            <h4 class="mb-0 "><i>{{job.company}}</i></h4> 
-                            <hr>
-                        </div>
-                    </div>
-                    <div class=""> <span>{{job.category}}</span> </div>
-                </div>
-                <div class="mt-5">
-                    <h3 class="heading">{{job.title}}</h3>
-                    <h6 class="heading">{{job.type}}</h6>
-                    <div class="mt-5">
-                        
-                        <div class="mt-3"> <span class="text1">{{job.seats_available}} <span class="text2">Seats Available</span></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        {% endfor %}
-       
-    </div>
-</div>
 <div class="container mt-5 card  m-5 p-4">
     <div class="row">
         <h1><i>Jobs Category</i></h1>

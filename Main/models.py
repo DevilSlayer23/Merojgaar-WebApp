@@ -20,11 +20,7 @@ class Company(models.Model):
         return self.name
  
 
-class Skill(models.Model):
-    name = models.CharField(max_length=50)
-    created_at = models.DateField(auto_now_add= True)
-    def __str__(self):
-        return self.name
+
 
 class UserDetails(models.Model):
     user = models.ForeignKey(User, on_delete= models.CASCADE)
@@ -33,7 +29,20 @@ class UserDetails(models.Model):
     dob = models.DateField()
     image = models.ImageField(upload_to='user/images/')
 
-    skills = models.ManyToManyField(Skill)
+    skills = models.CharField(max_length=254)
 
     def __str__(self):
         return self.user.username
+
+class Job(models.Model):
+    title = models.CharField( max_length=150)
+    company = models.ForeignKey(Company , on_delete=models.CASCADE)
+    description = models.TextField()
+    salary_range = models.CharField( max_length=254)
+    experience = models.CharField(max_length=100)
+    seats_available = models.IntegerField()
+    skills_required = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.title
+

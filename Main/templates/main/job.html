@@ -1,0 +1,68 @@
+{% include 'main/header.html' %}
+
+<div class="container  mt-2 ">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <div style="width:100%"class="col-md-8">
+                <form action="" method="POST" class="form">
+                  {%csrf_token%}
+                    <div class="card">
+                        <div style="background-color: gray" class="card-header">
+                          General Information
+                        </div>
+                        <div class="card-body">
+                          <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Job Title</label>
+                          <input type="text" class="form-control" name="title">
+                          </div>
+                          <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Company Name</label>
+                          <select name="company" id="">
+                              {%for c in company%}
+                                <option value="{{c.id}}">{{c.name}}</option>
+
+                              {%endfor %}
+                          </select>
+                          </div>
+
+                          <div class="mb-3">
+                            <textarea class="form-control" name="description" id="" cols="30" rows="10"></textarea>
+
+                          </div>
+                      <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Experience</label>
+                          <input type="text" class="form-control" name="experience">
+                          </div>
+                          
+    
+                          <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Seats Available</label>
+                          <input type="number" class="form-control" name="seats_available">
+                          </div>
+            
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Salary Range</label>
+                          <input type="text" name="salary_range" class="form-control">
+
+                          </div>
+                          <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Skills Required</label>
+                            <input type="text" name="skills_required" class="form-control">
+                            <div class="form-text"> Add skills with comma separted values</div>
+                          </div>
+
+                          <div class="mb-3">
+                            <button type="submit" class="btn btn-success ">Add Job</button>
+                          </div>
+                          
+                        
+                        </div>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'main/footer.html' %}

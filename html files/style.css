@@ -1,0 +1,12 @@
+.card{
+margin: 10px;
+padding: 16px;
+}
+.card-text a{
+    margin: 5px;
+    padding: 0px;
+}
+.nav-btn{
+	
+	float: right;
+}

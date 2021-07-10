@@ -1,29 +1,15 @@
 from django.shortcuts import render , redirect
-from .forms import UserCreationForm
+from .forms import  JobForm
 from django.contrib.auth import login
 from django.contrib import messages
 from .forms import CompanyForm
 
 # Create your views here.
+from .models import Company 
 
-
-def register_user(request):
-    if request.method == "POST":
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request , user)
-            messages.success(request , "Registration Success")
-            return  redirect("Main:index")
-        messages.error(request , "Regsitraion unsucsessfull")
-    form = UserCreationForm()
-    context = {
-        'form' : form
-    }
-    return render(request , 'Main/register.html' , context)
 
 def index(request):
-    return render(request , 'Main/index.html')
+    return render(request , 'main/index.html')
 
 def register_comp(request):
     if request.method == "POST":
@@ -37,4 +23,19 @@ def register_comp(request):
     context = {
         'company_form' : company_form,
     }
-    return render(request, 'Main/index.html', context)
+    return render(request, 'main/index.html', context)
+
+
+def job_form(request):
+    company = Company.objects.all()
+    if request.method == 'POST':
+        jobForm = JobForm(request.POST)
+        if jobForm.is_valid():
+            jobForm.save()
+            print("done")
+            return redirect('Main:job-form')
+    context = {
+        'company': company,
+        
+    }
+    return render(request, 'main/job.html', context)

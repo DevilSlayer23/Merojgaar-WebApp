@@ -1,0 +1,28 @@
+{% include 'main/header.html' %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <form action="" method="POST" class="form card m-5 p-5">
+                <h2><i>Contact Us </i></h2>
+                <div class="mb-3">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" placeholder="Enter name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="name">Title</label>
+                    <input type="text" name="title" placeholder="Enter name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="name">Message</label>
+                    <textarea  name="message" placeholder="Enter your message." rows='10' cols='30'class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+{% include 'main/footer.html' %}

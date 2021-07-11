@@ -6,5 +6,6 @@ urlpatterns = [
     path('company-login/', views.login, name="company-login"),
     path('company-home/', views.company_home, name="company-home"),
     path('company-logout/', views.company_logout, name="company-logout"),
+    path('job/<int:id>', views.job , name="job")
 
 ]

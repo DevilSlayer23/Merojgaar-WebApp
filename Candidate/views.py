@@ -20,7 +20,7 @@ def login(request):
         user = Candidate.objects.all().get(username=request.POST.get('username'))
         if user.username == request.POST.get('username') and user.password == request.POST.get('password'):
             request.session['username'] = user.username
-            print(request.session['username'])
+            request.session['user_id'] = user.id
             return redirect('Candidate:home')
     
     return render(request, 'candidate/login.html')
@@ -45,6 +45,7 @@ def home(request):
         'category': category,
         'jobs': jobs,
         'skills':skills,
+        'user_id': request.session.get('user_id')
     }
     return render(request , 'candidate/home.html', context)
 
@@ -54,3 +55,4 @@ def candidate_logout(request):
    except:
       pass
    return redirect('Main:index')
+

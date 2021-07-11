@@ -1,0 +1,69 @@
+{% include 'company/header.html' %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card mt-5">
+                <div class="card-header">
+                    {{job.title}}
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Company</th> 
+                                <tr>
+                                    <td>{{job.company}}</td>
+                                </tr>
+                            </tr>
+                            <tr></tr> <th>Category</th>
+                            <tr>
+                                <td>{{job.category}}</td>
+                            </tr>
+                        </tr>
+                            <tr><th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>{{job.description}}</td>
+                            </tr>
+                            <tr><th>Salary Range</th>
+                                <tr>
+                                    <td>{{job.salary_range}}</td>
+                                </tr></tr>
+                            <tr><th>Experience</th>
+                                <tr>
+                                    <td>{{job.experience}}</td>
+                                </tr></tr>
+                            <tr><th>Seats Available</th>
+                                <tr>
+                                    <td>{{job.seats_available}}</td>
+                                </tr></tr>
+                            <tr><th>Skills Required</th>
+                                <tr>
+                                    <td>{{job.skills_required}}</td>
+                                </tr></tr>
+                            <tr><th>Job Type</th>
+                                <tr>
+                                    <td>{{job.type}}</td>
+                                </tr>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                
+                                
+                                
+                                
+                               
+                                
+                                
+                               
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'main/footer.html' %}

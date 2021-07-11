@@ -1,5 +1,5 @@
 from django.db import models
-
+from Candidate.models import Candidate
 # Create your models here.
 
 class Company(models.Model):
@@ -47,3 +47,12 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title
+
+class JobApply(models.Model):
+    job = models.ForeignKey(Job , on_delete=models.CASCADE)
+    candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    applied_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.job.title

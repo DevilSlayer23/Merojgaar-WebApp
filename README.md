@@ -39,7 +39,7 @@ python manage.py runserver
 
 - users can contact administrators from contact form
 
-### Upcoming Features
+## Upcoming Features
 Freelancing platform integration
 payment gateway integration
 dynamic job suggestion for candidates accordance to their skills and interests 

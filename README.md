@@ -40,10 +40,10 @@ python manage.py runserver
 - users can contact administrators from contact form
 
 ## Upcoming Features
-Freelancing platform integration
-payment gateway integration
-dynamic job suggestion for candidates accordance to their skills and interests 
-  and many more...
+    Freelancing platform integration
+    payment gateway integration
+    dynamic job suggestion for candidates accordance to their skills and interests 
+    and many more...
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

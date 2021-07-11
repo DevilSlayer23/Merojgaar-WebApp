@@ -1,0 +1,33 @@
+{% include 'main/header.html' %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="" method="POST" class="form m-5 p-5 card" enctype="multipart/form">
+                    {%csrf_token%}
+                    <input type="hidden" name="user" value="{{candidate}}">
+
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" name="email" class="form-control" >
+                    </div>
+
+                    
+
+                    <div class="form-group mb-3">
+                        <label for="skills" class="form-label">Enter your Skills</label>
+                        <input type="text" name="skills" class="form-control" >
+                        <div class="form-text">ENter your skills by comma separated values</div>
+                    </div>
+
+
+                    <div class="form-control mb-3">
+                        <button class="btn btn-success" type="submit">Add your details.</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% include 'main/footer.html' %}

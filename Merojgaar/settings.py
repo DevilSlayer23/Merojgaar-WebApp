@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-h#t(@u#$c3^_#a3^qg8ljz%kw+70#dy9(u8z!5suv21x2#-0m$
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'https://c89b928400f972.localhost.run', 'c89b928400f972.localhost.run','http://c89b928400f972.localhost.run','127.0.0.1'
 ]
 
 
@@ -42,13 +43,14 @@ INSTALLED_APPS = [
     'Main',
     'Company',
     'Candidate',
+    'Contact',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -138,7 +140,7 @@ STATICFILES_DIRS = [
 ]
 
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/home'
 SITE_ID = 1
 
 # Default primary key field type

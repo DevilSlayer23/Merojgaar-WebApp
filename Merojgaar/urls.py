@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include(('Main.urls', 'Main'), namespace="Main") ),
     path('', include(('Company.urls', 'Company'), namespace="Company") ),
     path('', include(('Candidate.urls', 'Candidate'), namespace="Candidate") ),
+    path('', include(('Contact.urls', 'Contact'), namespace="Contact") ),
 ]

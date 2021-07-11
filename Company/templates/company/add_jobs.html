@@ -1,0 +1,114 @@
+{% include 'company/header.html' %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-6">
+        <form>
+          <div class="card">
+            <div style="background-color: gray" class="card-header">
+              Add Job For your company
+            </div>
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Job Title</label>
+                <input type="text" class="form-control" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Company Name</label>
+                <input type="text" class="form-control" name="company">
+              </div>
+              <label for="exampleInputEmail1" class="form-label">Category</label>
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Category</option>
+                <option value="1">10000 - 20000</option>
+                <option value="2">20000 - 30000 </option>
+                <option value="3">30000 - 40000</option>
+              </select>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Experience</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Location</label>
+                <input type="address" class="form-control">
+              </div>
+              <label for="exampleInputEmail1" class="form-label">Company Logo</label>
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload Logo</label>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Number of Vacancy</label>
+                <input type="number" class="form-control">
+              </div>
+
+              <label for="exampleInputEmail1" class="form-label">Salary Range</label>
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option selected>Salary</option>
+                <option value="1">10000 - 20000</option>
+                <option value="2">20000 - 30000 </option>
+                <option value="3">30000 - 40000</option>
+              </select>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Contact</label>
+                <input type="tel" class="form-control" pattern="[0-9]{10}">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Website</label>
+                <input type="text" class="form-control" id="exampleInputEmail1">
+              </div>
+
+
+            </div>
+          </div>
+          <button style="width: 50%; margin: auto;" type="button"
+    class="btn btn-primary btn-lg justify-content-center d-flex">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div><br>
+  
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row mt-5 py-3">
+
+        <div class="col-md-4">
+
+
+          <h1>it is footer</h1>
+          <p>Copyright &copy; 2021. All rights reserved</p>
+
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+          <i style="margin-left: 150px" class="fas fa-building fa-2x"></i>
+        </div>
+        <hr>
+      </div>
+    </div>
+
+
+
+  </footer>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
